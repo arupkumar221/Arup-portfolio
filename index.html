@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arup Kumar Dash | DevOps &amp; AWS Cloud Engineer</title>
+<meta name="description" content="Portfolio of Arup Kumar Dash: AWS, Terraform, Kubernetes (EKS), CI/CD, GitOps and observability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#home">Arup Dash</a>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+  <nav class="nav" id="nav">
+    <a href="#pipeline">How I ship</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#path">Path</a>
+    <a href="#goals">2027 goals</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="home">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="status"><span class="dot"></span> Open to DevOps and cloud roles, 2027</p>
+      <h1>I turn manual cloud work into pipelines that run themselves.</h1>
+      <p class="lead">I'm Arup, a DevOps and AWS engineer in Hyderabad. I provision with Terraform, deliver with GitHub Actions and Argo CD, run on EKS, and watch it all with Prometheus and Grafana.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="https://github.com/arupkumar221" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/arup-kumar-dash-389409322" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="images/profile.jpg" alt="Portrait of Arup Kumar Dash" onerror="this.parentElement.classList.add('no-img')">
+      <span class="initials" aria-hidden="true">AD</span>
+      <figcaption>B.Tech CSE 2026 · CGPA 8.37<br>AWS Cloud Practitioner (in progress)</figcaption>
+    </figure>
+  </section>
+
+  <!-- PIPELINE -->
+  <section class="pipeline-sec" id="pipeline">
+    <div class="wrap">
+      <h2>How I ship software</h2>
+      <p class="sub">Every project follows this path. Press the button to run it.</p>
+      <ol class="stages" id="stages">
+        <li><b>Git push</b><small>Code lands on main</small></li>
+        <li><b>GitHub Actions</b><small>Build and test</small></li>
+        <li><b>Docker build</b><small>Image is created</small></li>
+        <li><b>Amazon ECR</b><small>Image is stored</small></li>
+        <li><b>Argo CD</b><small>GitOps auto-sync</small></li>
+        <li><b>Amazon EKS</b><small>Pods roll out</small></li>
+        <li><b>Prometheus + Grafana</b><small>Live health</small></li>
+      </ol>
+      <div class="tf-row"><span>Terraform provisions the VPC, cluster and registry underneath every stage.</span></div>
+      <button class="btn primary" id="runBtn">Run pipeline</button>
+      <span class="run-msg" id="runMsg" role="status"></span>
+    </div>
+  </section>
