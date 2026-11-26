@@ -1,62 +1,289 @@
-/* ---------- Added for the recruiter version of index.html ---------- */
-.skip-link {
-  position: absolute; left: 16px; top: -60px; z-index: 100;
-  background: var(--ink); color: #fff; padding: 10px 18px; border-radius: var(--r-sm);
-  text-decoration: none; font-weight: 600; transition: top .2s;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arup Kumar Dash | DevOps &amp; AWS Cloud Engineer</title>
+<meta name="description" content="DevOps and AWS Cloud Engineer in Hyderabad. Terraform, Kubernetes (EKS), GitHub Actions, Argo CD, Prometheus and Grafana. Open to roles in 2027.">
+<meta name="author" content="Arup Kumar Dash">
+<meta property="og:title" content="Arup Kumar Dash | DevOps &amp; AWS Cloud Engineer">
+<meta property="og:description" content="Terraform, EKS, CI/CD, GitOps and observability, shown through real projects.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Arup Kumar Dash",
+  "jobTitle": "DevOps Engineer",
+  "email": "mailto:arupdash14@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressCountry": "IN" },
+  "sameAs": [
+    "https://github.com/arupkumar221",
+    "https://www.linkedin.com/in/arup-kumar-dash-389409322"
+  ],
+  "knowsAbout": ["AWS", "Terraform", "Kubernetes", "Amazon EKS", "GitHub Actions", "Argo CD", "Prometheus", "Grafana", "Docker", "Ansible"]
 }
-.skip-link:focus { top: 12px; }
+</script>
+</head>
+<body>
 
-/* Quick facts under the hero buttons */
-.facts {
-  display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 12px 36px;
-  margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line);
-}
-.facts dt { font-size: .82rem; font-weight: 600; color: var(--muted); margin-bottom: 2px; }
-.facts dd { font-size: .95rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
+<a class="skip-link" href="#projects">Skip to projects</a>
 
-/* What I can do */
-.offer { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
-.offer article {
-  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--blue);
-  border-radius: var(--r-md); padding: 28px; box-shadow: var(--shadow-sm);
-}
-.offer h3 { font-size: 1.3rem; margin-bottom: 10px; }
-.offer p { font-size: .98rem; color: var(--muted); }
+<header class="top">
+  <a class="brand" href="#home">Arup Dash</a>
+  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+  <nav class="nav" id="nav">
+    <a href="#offer">What I do</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#pipeline">How I ship</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-cta">Hire me</a>
+  </nav>
+</header>
 
-/* Project extras */
-.badge {
-  align-self: flex-start; font-size: .8rem; font-weight: 700;
-  background: var(--amber); color: var(--ink); padding: 4px 12px; border-radius: 999px;
-}
-.proj-link {
-  align-self: flex-start; font-weight: 600; font-size: .92rem; color: var(--blue);
-  text-decoration: none; border-bottom: 2px solid transparent; transition: border-color .2s;
-}
-.proj-link:hover { border-bottom-color: var(--blue); }
-.proj.wide .proj-link { color: #6cc0f0; }
-.proj.wide .proj-link:hover { border-bottom-color: #6cc0f0; }
+<main id="home">
 
-/* Skills matrix */
-.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--shadow-sm); }
-.matrix { width: 100%; border-collapse: collapse; min-width: 680px; background: var(--card); }
-.matrix th, .matrix td { text-align: left; padding: 16px 20px; vertical-align: top; font-size: .95rem; }
-.matrix thead th { background: var(--navy); color: #fff; font-family: var(--display); font-size: .95rem; }
-.matrix tbody tr + tr > * { border-top: 1px solid var(--line); }
-.matrix tbody th { font-family: var(--display); font-weight: 700; color: var(--ink); width: 22%; }
-.matrix td:nth-child(2) { color: var(--ink-2); }
-.matrix td:nth-child(3) { color: var(--muted); }
-.matrix tbody tr:hover > * { background: var(--blue-l); }
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="status"><span class="dot"></span> Open to DevOps and Cloud roles, 2027</p>
+      <h1>I turn manual cloud work into pipelines that run themselves.</h1>
+      <p class="lead">DevOps and AWS engineer in Hyderabad. I provision with Terraform, deliver with GitHub Actions and Argo CD, run workloads on EKS, and monitor them with Prometheus and Grafana.</p>
+      <div class="actions">
+        <a class="btn primary" href="resume.pdf" download>Download resume</a>
+        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn" href="https://github.com/arupkumar221" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/arup-kumar-dash-389409322" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Education</dt><dd>B.Tech CSE, 2026<br>CGPA 8.37</dd></div>
+        <div><dt>Certification</dt><dd>AWS Cloud Practitioner<br>(in progress)</dd></div>
+        <div><dt>Location</dt><dd>Hyderabad, India</dd></div>
+        <div><dt>Available</dt><dd>2027, full-time or internship</dd></div>
+      </dl>
+    </div>
+    <figure class="portrait">
+      <img src="images/profile.jpg" alt="Portrait of Arup Kumar Dash" onerror="this.parentElement.classList.add('no-img')">
+      <span class="initials" aria-hidden="true">AD</span>
+      <figcaption>Learn, build, automate, improve.</figcaption>
+    </figure>
+  </section>
 
-/* About */
-.about { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start; margin-top: 8px; }
-.about p { margin-bottom: 18px; max-width: 60ch; }
-.about h3 { font-size: 1.3rem; margin-bottom: 4px; }
-.about .path { margin-top: 18px; }
+  <!-- WHAT I BRING -->
+  <section class="wrap section" id="offer">
+    <h2>What I can do for your team</h2>
+    <p class="sub">Four areas where I have built working projects, not just completed tutorials.</p>
+    <div class="offer">
+      <article>
+        <h3>Infrastructure as code</h3>
+        <p>Reusable Terraform modules for VPC, EC2, RDS, EKS and ALB. One codebase for dev, staging and prod, with S3 remote state and DynamoDB locking.</p>
+      </article>
+      <article>
+        <h3>Automated delivery</h3>
+        <p>GitHub Actions builds Docker images and pushes them to ECR. Argo CD syncs and self-heals the cluster from Git. Terraform plans on pull request and applies on merge.</p>
+      </article>
+      <article>
+        <h3>Kubernetes on AWS</h3>
+        <p>EKS clusters with Ingress, LoadBalancers, IAM and OIDC, plus readiness and liveness probes, HPA and Cluster Autoscaler.</p>
+      </article>
+      <article>
+        <h3>Observability</h3>
+        <p>Ansible rolls out Node Exporter across EC2 fleets. Prometheus discovers the hosts, and Grafana dashboards show live health.</p>
+      </article>
+    </div>
+  </section>
 
-@media (max-width: 960px) {
-  .facts { grid-template-columns: repeat(2, auto); }
-  .about { grid-template-columns: 1fr; gap: 40px; }
-}
-@media (max-width: 720px) {
-  .offer { grid-template-columns: 1fr; }
-}
+  <!-- PROJECTS -->
+  <section class="wrap section" id="projects">
+    <h2>Projects</h2>
+    <p class="sub">Filter by skill. Each card lists what I built and which skills it shows.</p>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="chip on" data-f="all">All</button>
+      <button class="chip" data-f="terraform">Terraform</button>
+      <button class="chip" data-f="kubernetes">Kubernetes</button>
+      <button class="chip" data-f="cicd">CI/CD</button>
+      <button class="chip" data-f="monitoring">Monitoring</button>
+    </div>
+
+    <div class="projects">
+
+      <article class="proj wide" data-tags="terraform cicd kubernetes monitoring">
+        <span class="badge">Flagship</span>
+        <h3>End-to-end microservices on AWS</h3>
+        <p>Infrastructure, CI/CD, GitOps and monitoring working together in one pipeline.</p>
+        <ul>
+          <li>Reusable Terraform modules: VPC, EC2, RDS, EKS, ALB</li>
+          <li>GitHub Actions builds Docker images and pushes to Amazon ECR</li>
+          <li>Argo CD auto-sync and self-healing</li>
+          <li>Prometheus and Grafana observability</li>
+        </ul>
+        <p class="tags">Terraform · GitHub Actions · Argo CD · EKS · Grafana</p>
+        <!-- Replace each "View on GitHub" link with that project's repository URL -->
+        <a class="proj-link" href="https://github.com/arupkumar221" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+
+      <article class="proj" data-tags="terraform kubernetes">
+        <h3>AWS EKS infrastructure</h3>
+        <p>A full EKS environment provisioned with Terraform.</p>
+        <ul>
+          <li>Cluster, VPC, subnets and networking</li>
+          <li>HPA and Cluster Autoscaler</li>
+          <li>LoadBalancer, Ingress, IAM and OIDC</li>
+        </ul>
+        <p class="tags">AWS · Terraform · EKS · Kubernetes</p>
+        <a class="proj-link" href="https://github.com/arupkumar221" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+
+      <article class="proj" data-tags="terraform cicd">
+        <h3>Multi-environment Terraform</h3>
+        <p>One codebase for dev, staging and prod.</p>
+        <ul>
+          <li>Modules: VPC, EC2, ALB, Auto Scaling, IAM, alarms</li>
+          <li>S3 remote state with DynamoDB locking</li>
+          <li>Plan on pull request, apply on merge</li>
+        </ul>
+        <p class="tags">Terraform · S3 · DynamoDB · CI/CD</p>
+        <a class="proj-link" href="https://github.com/arupkumar221" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+
+      <article class="proj" data-tags="kubernetes">
+        <h3>Docker + Kubernetes deployment</h3>
+        <p>A containerized app with production-style reliability.</p>
+        <ul>
+          <li>Custom Dockerfiles, Pods, Deployments, Services</li>
+          <li>NodePort and LoadBalancer exposure</li>
+          <li>Probes, HPA and Cluster Autoscaler</li>
+        </ul>
+        <p class="tags">Docker · Kubernetes · HPA</p>
+        <a class="proj-link" href="https://github.com/arupkumar221" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+
+      <article class="proj" data-tags="monitoring">
+        <h3>Automated infrastructure monitoring</h3>
+        <p>Fleet-wide metrics with no manual setup.</p>
+        <ul>
+          <li>Ansible installs Node Exporter on EC2 fleets</li>
+          <li>Prometheus EC2 service discovery and PromQL</li>
+          <li>Grafana dashboards for live health</li>
+        </ul>
+        <p class="tags">Ansible · Prometheus · Grafana</p>
+        <a class="proj-link" href="https://github.com/arupkumar221" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+
+      <article class="proj" data-tags="terraform">
+        <h3>e-Voting infrastructure</h3>
+        <p>Terraform-driven provisioning for a cloud-hosted application.</p>
+        <ul>
+          <li>Automated resource provisioning</li>
+          <li>Reusable Terraform modules</li>
+          <li>Version-controlled infrastructure</li>
+        </ul>
+        <p class="tags">Terraform · AWS · Linux</p>
+        <a class="proj-link" href="https://github.com/arupkumar221" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS MATRIX -->
+  <section class="stack-sec" id="skills">
+    <div class="wrap">
+      <h2>Skills, with proof</h2>
+      <p class="sub">Each skill area is linked to the project where I used it.</p>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr><th scope="col">Skill area</th><th scope="col">Tools</th><th scope="col">Used in</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Cloud (AWS)</th><td>EC2, VPC, S3, IAM, ALB, Auto Scaling, RDS, Lambda, Route 53, CloudFront, EKS, ECR, CloudWatch, DynamoDB</td><td>EKS infrastructure, Microservices on AWS, Multi-environment Terraform</td></tr>
+            <tr><th scope="row">Infrastructure as code</th><td>Terraform, S3 remote state, DynamoDB locking</td><td>Multi-environment Terraform, e-Voting infrastructure</td></tr>
+            <tr><th scope="row">Containers and orchestration</th><td>Docker, Kubernetes, EKS, HPA, Cluster Autoscaler</td><td>Docker + Kubernetes deployment, EKS infrastructure</td></tr>
+            <tr><th scope="row">CI/CD and GitOps</th><td>GitHub Actions, Jenkins, Argo CD, Maven, SonarQube</td><td>Microservices on AWS, Multi-environment Terraform</td></tr>
+            <tr><th scope="row">Monitoring</th><td>Prometheus, Grafana, Loki, Node Exporter, CloudWatch</td><td>Infrastructure monitoring, Microservices on AWS</td></tr>
+            <tr><th scope="row">Configuration management</th><td>Ansible</td><td>Infrastructure monitoring</td></tr>
+            <tr><th scope="row">Linux and scripting</th><td>Linux, Bash, Python, Nginx, Git, GitHub</td><td>All projects</td></tr>
+            <tr><th scope="row">Databases</th><td>MySQL, PostgreSQL, RDS, DynamoDB</td><td>Microservices on AWS, Terraform state locking</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section class="pipeline-sec" id="pipeline">
+    <div class="wrap">
+      <h2>How I ship software</h2>
+      <p class="sub">Every project follows this path. Press the button to run it.</p>
+      <ol class="stages" id="stages">
+        <li><b>Git push</b><small>Code lands on main</small></li>
+        <li><b>GitHub Actions</b><small>Build and test</small></li>
+        <li><b>Docker build</b><small>Image is created</small></li>
+        <li><b>Amazon ECR</b><small>Image is stored</small></li>
+        <li><b>Argo CD</b><small>GitOps auto-sync</small></li>
+        <li><b>Amazon EKS</b><small>Pods roll out</small></li>
+        <li><b>Prometheus + Grafana</b><small>Live health</small></li>
+      </ol>
+      <div class="tf-row"><span>Terraform provisions the VPC, cluster and registry underneath every stage.</span></div>
+      <button class="btn primary" id="runBtn">Run pipeline</button>
+      <span class="run-msg" id="runMsg" role="status"></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="wrap section" id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <div>
+        <p>I'm a final-year B.Tech Computer Science student who enjoys replacing repeated manual steps with version-controlled automation. I work best when I can see a change go from a Git commit to a running, monitored service without anyone clicking through a console.</p>
+        <p>I'm preparing for the AWS Certified Cloud Practitioner exam, then the Solutions Architect Associate. I am looking for a DevOps or Cloud role where I can learn from a strong team and take real ownership of pipelines and infrastructure.</p>
+      </div>
+      <div>
+        <h3>My learning path</h3>
+        <ol class="path">
+          <li>Linux</li><li>Git and GitHub</li><li>AWS</li><li>Docker</li><li>Terraform</li><li>Jenkins / GitHub Actions</li><li>Kubernetes (EKS)</li><li>Argo CD</li><li>Prometheus + Grafana</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOALS -->
+  <section class="wrap section" id="goals">
+    <h2>What I'm working on next</h2>
+    <p class="sub">My 2027 goals. Tick one to track it on this page.</p>
+    <ul class="goals" id="goals-list">
+      <li><label><input type="checkbox"> Land a role as a DevOps or Cloud Engineer</label></li>
+      <li><label><input type="checkbox"> Earn AWS Cloud Practitioner, then Solutions Architect Associate</label></li>
+      <li><label><input type="checkbox"> Go deeper on Kubernetes and EKS</label></li>
+      <li><label><input type="checkbox"> Master Terraform patterns: modules, testing, policy as code</label></li>
+      <li><label><input type="checkbox"> Build multi-stage CI/CD: build, scan, test, deploy, promote</label></li>
+      <li><label><input type="checkbox"> Strengthen observability: metrics, logs, alerting</label></li>
+      <li><label><input type="checkbox"> Publish a write-up for every major project</label></li>
+    </ul>
+    <p class="progress" id="progress"></p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's work together</h2>
+      <p class="lead">Hiring for a DevOps or Cloud role, or an internship? I reply to every message.</p>
+      <div class="actions">
+        <button class="btn primary" id="copyMail" data-mail="arupdash14@gmail.com">Copy email address</button>
+        <a class="btn light" href="mailto:arupdash14@gmail.com">Send an email</a>
+        <a class="btn light" href="resume.pdf" download>Download resume</a>
+        <a class="btn light" href="https://www.linkedin.com/in/arup-kumar-dash-389409322" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn light" href="https://github.com/arupkumar221" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="foot">© <span id="yr"></span> Arup Kumar Dash · Hyderabad, India</p>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
