@@ -10,9 +10,7 @@
 
   /* ---------- Header: shadow on scroll ---------- */
   var header = $('.top');
-  function onScroll() {
-    header.classList.toggle('scrolled', window.scrollY > 8);
-  }
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -62,7 +60,6 @@
   var runBtn  = $('#runBtn');
   var runMsg  = $('#runMsg');
   var running = false;
-  var timers  = [];
 
   function runPipeline() {
     if (running) return;
@@ -74,9 +71,9 @@
     var step = reduceMotion ? 0 : 750;
 
     stages.forEach(function (stage, i) {
-      timers.push(setTimeout(function () {
+      setTimeout(function () {
         stage.classList.add('run');
-        timers.push(setTimeout(function () {
+        setTimeout(function () {
           stage.classList.remove('run');
           stage.classList.add('done');
           if (i === stages.length - 1) {
@@ -84,10 +81,9 @@
             runBtn.disabled = false;
             runBtn.textContent = 'Run again';
             running = false;
-            timers = [];
           }
-        }, step));
-      }, i * step));
+        }, step);
+      }, i * step);
     });
   }
 
@@ -108,13 +104,13 @@
   /* ---------- Project filters ---------- */
   var chips    = $$('.chip');
   var projects = $$('.proj');
-  var status   = document.createElement('p');
-  status.className = 'sr-only';
-  status.setAttribute('role', 'status');
-  $('.filters').insertAdjacentElement('afterend', status);
+  var liveMsg  = document.createElement('p');
+  liveMsg.className = 'sr-only';
+  liveMsg.setAttribute('role', 'status');
+  $('.filters').insertAdjacentElement('afterend', liveMsg);
 
   chips.forEach(function (chip) {
-    chip.setAttribute('aria-pressed', chip.classList.contains('on'));
+    chip.setAttribute('aria-pressed', String(chip.classList.contains('on')));
     chip.addEventListener('click', function () {
       var f = chip.dataset.f;
       var shown = 0;
@@ -122,7 +118,7 @@
       chips.forEach(function (c) {
         var on = c === chip;
         c.classList.toggle('on', on);
-        c.setAttribute('aria-pressed', on);
+        c.setAttribute('aria-pressed', String(on));
       });
 
       projects.forEach(function (p) {
@@ -131,7 +127,7 @@
         if (match) shown++;
       });
 
-      status.textContent = 'Showing ' + shown + (shown === 1 ? ' project' : ' projects');
+      liveMsg.textContent = 'Showing ' + shown + (shown === 1 ? ' project' : ' projects');
     });
   });
 
